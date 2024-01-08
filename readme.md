@@ -1,3 +1,5 @@
+Summary: Mình bắt đầu từ source vietocr có sẵn ở github. Để đảm bảo model size đủ nhẹ như yêu cầu thì mình thay backbone có sẵn bằng các backbone nhẹ hơn (các backbone này đều có sẵn ở timm), ngoài ra mình dùng float16 để giảm size model. Cụ thể mình dùng 2 models efficientnetv2_b1 (24.5Mb) và efficientnetv2_b2 (22.8Mb), tổng 2 model này là 47.3Mb vẫn nằm trong giới hạn cho phép. Để tăng độ chính xác thì mình tạo thêm synthetic dataset. Synthetic dataset1 là augmneted của data cuộc thi; synthetic dataset 2 là mình tự random address (sử dụng thông tin tên tỉnh thành, quận huyện) rồi dùng PIL Image để tạo ra data dạng ảnh.; synthetic dataset3 là mình dùng những câu thơ có sẵn để generate ra data dạng ảnh.
+
 ## 1.INSTALLATION
 - Ubuntu 18.04.5 LTS
 - CUDA 11.2
